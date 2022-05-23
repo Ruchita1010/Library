@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Odin Library</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <h1>Library</h1>
+            </nav>
+            <div id="add-book">
+                <form action="#">
+                    <input type="text" name="book-name" id="book-name">
+                    <input type="text" name="author-name" id="author-name">
+                    <select name="status" id="status">
+                        <option value="Read">Read</option>
+                        <option value="Not Read" selected>Not Read</option>
+                    </select>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </header>
+        <main>
+            <table id="books">
+                <tr>
+                    <td>Name</td>
+                    <td>Author</td>
+                    <td>Status</td>
+                </tr>
+                <tr class="book">
+                    <td>Little Women</td>
+                    <td>Louisa May Alcott</td>
+                    <td>
+                        <input type="button" value="Not Read">
+                    </td>
+                    <td>
+                        <input type="button" value="Delete">
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -3,3 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+header {
+    height: 50vh;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.component {
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #0b71ca;
+}
+
+#add-book {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#status, .user-input > input {
+    width: 100%;
+    height: 3rem;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: 1px solid blue;
+    outline: none;
+}
+
+.user-input {
+    margin: 1rem;
+}
+
+#add-book-btn {
+    font-size: 1.2rem;
+    padding: 1rem 4rem;
+}

@@ -6,28 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Odin Library</title>
+    <title>Library</title>
 </head>
 
 <body>
     <div id="container">
-        <header>
+        <header class="component">
             <nav>
-                <h1>Library</h1>
+                <h1>LIBRARY</h1>
             </nav>
-            <div id="add-book">
-                <form action="#">
+            <form action="#" id="add-book">
+                <div class="user-input">
+                    <label for="book-name">Book</label>
                     <input type="text" name="book-name" id="book-name">
+                </div>
+                <div class="user-input">
+                    <label for="author-name">Author</label>
                     <input type="text" name="author-name" id="author-name">
+                </div>
+                <div class="user-input">
+                    <label for="status">Status</label>
                     <select name="status" id="status">
                         <option value="Read">Read</option>
                         <option value="Not Read" selected>Not Read</option>
                     </select>
-                    <input type="submit" value="Add">
-                </form>
+                </div>
+            </form>
+            <div>
+                <input type="submit" value="ADD" id="add-book-btn">
             </div>
         </header>
-        <main>
+
+        <main class="component">
             <table id="books">
                 <tr>
                     <td>Name</td>
@@ -38,10 +48,20 @@
                     <td>Little Women</td>
                     <td>Louisa May Alcott</td>
                     <td>
-                        <input type="button" value="Not Read">
+                        <button type="button" class="btn">Not Read</button>
                     </td>
                     <td>
-                        <input type="button" value="Delete">
+                        <button type="button" class="btn">Delete</button>
+                    </td>
+                </tr>
+                <tr class="book">
+                    <td>Little Women</td>
+                    <td>Louisa May Alcott</td>
+                    <td>
+                        <button type="button" class="btn">Not Read</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn">Delete</button>
                     </td>
                 </tr>
             </table>

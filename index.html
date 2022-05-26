@@ -37,33 +37,38 @@
             </div>
         </header>
 
-        <main class="component">
+        <main class="component" id="books-wrapper">
             <table id="books">
-                <tr>
-                    <td>Name</td>
-                    <td>Author</td>
-                    <td>Status</td>
-                </tr>
-                <tr class="book">
-                    <td>Little Women</td>
-                    <td>Louisa May Alcott</td>
-                    <td>
-                        <button type="button" class="btn">Not Read</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn">Delete</button>
-                    </td>
-                </tr>
-                <tr class="book">
-                    <td>Little Women</td>
-                    <td>Louisa May Alcott</td>
-                    <td>
-                        <button type="button" class="btn">Not Read</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn">Delete</button>
-                    </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <td>NAME</td>
+                        <td>AUTHOR</td>
+                        <td>STATUS</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="book">
+                        <td>Little Women</td>
+                        <td>Louisa May Alcott</td>
+                        <td>
+                            <button type="button" class="btn status-btn">Not Read</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn del-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="book">
+                        <td>Little Women</td>
+                        <td>Louisa May Alcott</td>
+                        <td>
+                            <button type="button" class="btn status-btn">Not Read</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn del-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </main>
     </div>

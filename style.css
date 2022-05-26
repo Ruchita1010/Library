@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,23 +9,31 @@
 #container {
     min-height: 100vh;
     display: flex;
+    font-family: 'Lobster Two', cursive;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+    color: rgb(33, 2, 41);
+    background-color: #a7a6cb;
+    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
 }
 
 header {
     height: 50vh;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .component {
     min-width: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #0b71ca;
+}
+
+nav h1{
+    letter-spacing: 1rem;
 }
 
 #add-book {
@@ -36,7 +46,10 @@ header {
     height: 3rem;
     padding: 0.8rem;
     font-size: 1.2rem;
-    border: 1px solid blue;
+    color: rgb(33, 2, 41);
+    font-family: 'Lobster Two', cursive;
+    border-radius: 30px 30px 2px 30px ;
+    border: none;
     outline: none;
 }
 
@@ -47,4 +60,52 @@ header {
 #add-book-btn {
     font-size: 1.2rem;
     padding: 1rem 4rem;
+    color: rgb(33, 2, 41);
+    font-family: 'Lobster Two', cursive;
+    border-radius: 10px;
+    border: none;
+}
+
+#add-book-btn:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+#books-wrapper {
+    width: 80%;
+    overflow-x: auto;
+}
+
+#books {
+    border-collapse: collapse;
+}
+
+#books td {
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid snow;
+}
+
+.btn {
+    font-size: 1.4rem;
+    padding: 0.4rem 2rem;
+    font-family: 'Lobster Two', cursive;
+    border: 1px solid #8989ba;
+    background-color: #a7a6cb;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.status-btn {
+    color: rgb(223, 220, 220);
+    background-color: #6969ae;
+}
+
+.del-btn {
+    color: snow;
+    background-color: #6969ae;
 }

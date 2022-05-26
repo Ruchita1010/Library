@@ -15,7 +15,7 @@
             <nav>
                 <h1>LIBRARY</h1>
             </nav>
-            <form action="#" id="add-book">
+            <form action="#" id="add-book-form">
                 <div class="user-input">
                     <label for="book-name">Book</label>
                     <input type="text" name="book-name" id="book-name">
@@ -31,10 +31,11 @@
                         <option value="Not Read" selected>Not Read</option>
                     </select>
                 </div>
+                <div class="user-input">
+                    <label for="add-book-btn">&nbsp;</label>
+                    <input type="submit" value="ADD" id="add-book-btn">
+                </div>
             </form>
-            <div>
-                <input type="submit" value="ADD" id="add-book-btn">
-            </div>
         </header>
 
         <main class="component" id="books-wrapper">
@@ -72,6 +73,8 @@
             </table>
         </main>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -84,7 +84,12 @@ const updateData = (e) => {
         displayLibrary();
     }
     else if (e.target.classList.contains("status-btn")) {
-        console.log("status");
+        if(e.target.innerText === "Not Read"){
+            e.target.innerText = "Read";
+        }
+        else {
+            e.target.innerText = "Not Read";
+        }
     }
 }
 

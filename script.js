@@ -70,5 +70,26 @@ const addBook = (e) => {
     displayLibrary();
 }
 
+const updateData = (e) => {
+    if (e.target.innerText === "Delete") {
+        const bookName = e.target.parentElement.parentElement.firstElementChild.innerText;
+
+        // Remove book from the library array
+        library = library.filter(book => book.name !== bookName);
+
+        // Remove book from the localStorage
+        const key = localStorage.getItem(`${bookName}`);
+        localStorage.removeItem(key);
+
+        displayLibrary();
+    }
+    else if (e.target.classList.contains("status-btn")) {
+        console.log("status");
+    }
+}
+
 const addBookForm = document.querySelector("#add-book-form");
 addBookForm.addEventListener("submit", addBook);
+
+const tableBody = document.querySelector("tbody");
+tableBody.addEventListener("click", updateData);

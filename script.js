@@ -21,10 +21,34 @@ const clearFormInput = (formDiv) => {
 let library = [];
 
 // book constructor
-function Book(name, author, status) {   
+function Book(name, author, status) {
     this.name = name;
     this.author = author;
     this.status = status;
+}
+
+const displayLibrary = () => {
+    const tableBody = document.querySelector("tbody");
+    /* Clear all the old data so that the updated data won't stack up top of it 
+    leading to duplicate data */
+    tableBody.innerHTML = "";
+
+    //  Loop through each book and append it to the table body
+    library.forEach(book => {
+        const tableRow = document.createElement("tr");
+        tableRow.classList.add("book");
+        tableRow.innerHTML = `
+               <td>${book.name}</td>
+               <td>${book.author}</td>
+               <td>
+                   <button type="button" class="btn status-btn">${book.status}</button>
+               </td>
+               <td>
+                   <button type="button" class="btn del-btn">Delete</button>
+               </td>
+           `;
+        tableBody.appendChild(tableRow);
+    });
 }
 
 const addBook = (e) => {
@@ -41,7 +65,9 @@ const addBook = (e) => {
     library.push(book);
 
     // Add book to localStorage
-    localStorage.setItem(`${book.name}`,JSON.stringify(book));
+    localStorage.setItem(`${book.name}`, JSON.stringify(book));
+
+    displayLibrary();
 }
 
 const addBookForm = document.querySelector("#add-book-form");

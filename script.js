@@ -44,7 +44,7 @@ const displayLibrary = () => {
                    <button type="button" class="btn status-btn">${book.status}</button>
                </td>
                <td>
-                   <button type="button" class="btn del-btn">Delete</button>
+                   <button type="button" class="btn remove-btn">Remove</button>
                </td>
            `;
         tableBody.appendChild(tableRow);
@@ -71,7 +71,7 @@ const addBook = (e) => {
 }
 
 const updateData = (e) => {
-    if (e.target.innerText === "Delete") {
+    if (e.target.innerText === "Remove") {
         const bookName = e.target.parentElement.parentElement.firstElementChild.innerText;
 
         // Remove book from the library array

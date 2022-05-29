@@ -78,13 +78,12 @@ const updateData = (e) => {
         library = library.filter(book => book.name !== bookName);
 
         // Remove book from the localStorage
-        const key = localStorage.getItem(`${bookName}`);
-        localStorage.removeItem(key);
+        localStorage.removeItem(bookName);
 
         displayLibrary();
     }
     else if (e.target.classList.contains("status-btn")) {
-        if(e.target.innerText === "Not Read"){
+        if (e.target.innerText === "Not Read") {
             e.target.innerText = "Read";
         }
         else {

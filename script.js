@@ -80,8 +80,10 @@ const addBook = (e) => {
 }
 
 const updateData = (e) => {
+    // Get the book name
+    const bookName = e.target.parentElement.parentElement.firstElementChild.innerText;
+
     if (e.target.innerText === "Remove") {
-        const bookName = e.target.parentElement.parentElement.firstElementChild.innerText;
 
         // Remove book from the library array
         library = library.filter(book => book.name !== bookName);
@@ -92,12 +94,21 @@ const updateData = (e) => {
         displayLibrary();
     }
     else if (e.target.classList.contains("status-btn")) {
+        // Retrieve the book object from localStorage
+        const bookObj = JSON.parse(localStorage.getItem(bookName));
+
+        // Change the book status
         if (e.target.innerText === "Not Read") {
             e.target.innerText = "Read";
+            bookObj.status = "Read";
         }
         else {
             e.target.innerText = "Not Read";
+            bookObj.status = "Not Read";
         }
+
+        // Store the updated book object to localStorage
+        localStorage.setItem(bookName, JSON.stringify(bookObj));
     }
 }
 

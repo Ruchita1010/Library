@@ -33,6 +33,15 @@ const displayLibrary = () => {
     leading to duplicate data */
     tableBody.innerHTML = "";
 
+    // if localStorage has some books
+    if (library.length === 0 & localStorage.length !== 0) {
+        storedBooks = Object.keys(localStorage);
+        storedBooks.forEach(storedBook => {
+            // add all the stored books in library
+            library.push(JSON.parse(localStorage.getItem(storedBook)));
+        });
+    };
+
     //  Loop through each book and append it to the table body
     library.forEach(book => {
         const tableRow = document.createElement("tr");
@@ -97,3 +106,5 @@ addBookForm.addEventListener("submit", addBook);
 
 const tableBody = document.querySelector("tbody");
 tableBody.addEventListener("click", updateData);
+
+displayLibrary();

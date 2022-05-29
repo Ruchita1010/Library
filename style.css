@@ -32,7 +32,7 @@ header {
     justify-content: space-evenly;
 }
 
-nav h1{
+nav h1 {
     letter-spacing: 1rem;
 }
 
@@ -95,7 +95,7 @@ nav h1{
     border-radius: 20px;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     transform: scale(1.03);
 }

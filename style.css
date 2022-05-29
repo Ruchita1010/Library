@@ -13,9 +13,9 @@
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-    color: rgb(33, 2, 41);
-    background-color: #a7a6cb;
-    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+    color: hsl(288, 91%, 8%);
+    background-color: hsl(242, 26%, 72%);
+    background-image: linear-gradient(to top, hsl(242, 26%, 72%) 0%, hsl(240, 26%, 63%) 52%, hsl(240, 26%, 63%) 100%);
 }
 
 header {
@@ -46,7 +46,7 @@ nav h1 {
     height: 3rem;
     padding: 0.8rem;
     font-size: 1.2rem;
-    color: rgb(33, 2, 41);
+    color: hsl(288, 91%, 8%);
     font-family: 'Lobster Two', cursive;
     border-radius: 30px 30px 2px 30px ;
     border: none;
@@ -60,7 +60,7 @@ nav h1 {
 #add-book-btn {
     font-size: 1.2rem;
     padding: 1rem 4rem;
-    color: rgb(33, 2, 41);
+    color: hsl(288, 91%, 8%);
     font-family: 'Lobster Two', cursive;
     border-radius: 10px;
     border: none;
@@ -90,8 +90,8 @@ nav h1 {
     font-size: 1.4rem;
     padding: 0.4rem 2rem;
     font-family: 'Lobster Two', cursive;
-    border: 1px solid #8989ba;
-    background-color: #a7a6cb;
+    border: 1px solid hsl(240, 26%, 63%);
+    background-color: hsl(242, 26%, 72%);
     border-radius: 20px;
 }
 
@@ -102,10 +102,10 @@ nav h1 {
 
 .status-btn {
     color: rgb(223, 220, 220);
-    background-color: #6969ae;
+    background-color: hsl(240, 30%, 55%);
 }
 
 .remove-btn {
     color: snow;
-    background-color: #6969ae;
+    background-color: hsl(240, 30%, 55%);
 }

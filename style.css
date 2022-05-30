@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Source+Sans+Pro&display=swap');
 
 * {
     margin: 0;
@@ -9,19 +9,18 @@
 #container {
     min-height: 100vh;
     display: flex;
-    font-family: 'Lobster Two', cursive;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-    color: hsl(288, 91%, 8%);
-    background-color: hsl(242, 26%, 72%);
-    background-image: linear-gradient(to top, hsl(242, 26%, 72%) 0%, hsl(240, 26%, 63%) 52%, hsl(240, 26%, 63%) 100%);
+    color: hsl(8, 94%, 72%);
+    background-color: hsl(219, 30%, 13%);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 header {
     height: 50vh;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .component {
@@ -34,6 +33,9 @@ header {
 
 nav h1 {
     letter-spacing: 1rem;
+    margin: 2rem 0rem;
+    font-size: 3rem;
+    font-family: 'Lobster Two', 'cursive';
 }
 
 #add-book-form {
@@ -41,15 +43,17 @@ nav h1 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-#status, .user-input > input {
+#status,
+.user-input>input {
     width: 100%;
     height: 3rem;
     padding: 0.8rem;
     font-size: 1.2rem;
-    color: hsl(288, 91%, 8%);
-    font-family: 'Lobster Two', cursive;
-    border-radius: 30px 30px 2px 30px ;
-    border: none;
+    color: hsl(8, 94%, 72%);
+    background-color: hsl(219, 27%, 22%);
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 30px 30px 2px 30px;
+    border: 1px solid hsl(8, 94%, 72%);
     outline: none;
 }
 
@@ -57,11 +61,25 @@ nav h1 {
     margin: 1rem;
 }
 
+/* Change autofill text color */
+input:-webkit-autofill {
+    -webkit-text-fill-color: hsl(8, 94%, 72%) !important;
+}
+
+/* Change the autofill bakground color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* defining box-shadow for compatibility */
+    box-shadow: 0 0 0 30px hsl(219, 27%, 22%) inset !important;
+    -webkit-box-shadow: 0 0 0 30px hsl(219, 27%, 22%) inset !important;
+}
+
 #add-book-btn {
     font-size: 1.2rem;
-    padding: 1rem 4rem;
-    color: hsl(288, 91%, 8%);
-    font-family: 'Lobster Two', cursive;
+    color: hsl(8, 94%, 72%);
+    font-family: 'Source Sans Pro', sans-serif;
     border-radius: 10px;
     border: none;
 }
@@ -80,32 +98,27 @@ nav h1 {
     border-collapse: collapse;
 }
 
+#books thead {
+    font-weight: bold;
+    border-bottom: 1px solid hsl(8, 94%, 72%);
+}
+
 #books td {
     padding: 1rem;
     font-size: 1.8rem;
-    border-bottom: 1px solid snow;
 }
 
 .btn {
     font-size: 1.4rem;
     padding: 0.4rem 2rem;
-    font-family: 'Lobster Two', cursive;
-    border: 1px solid hsl(240, 26%, 63%);
-    background-color: hsl(242, 26%, 72%);
+    color: hsl(219, 30%, 13%);
+    background-color: hsl(8, 94%, 72%);
+    font-family: 'Source Sans Pro', sans-serif;
+    border: none;
     border-radius: 20px;
 }
 
 .btn:hover {
     cursor: pointer;
     transform: scale(1.03);
-}
-
-.status-btn {
-    color: rgb(223, 220, 220);
-    background-color: hsl(240, 30%, 55%);
-}
-
-.remove-btn {
-    color: snow;
-    background-color: hsl(240, 30%, 55%);
 }

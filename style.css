@@ -109,6 +109,10 @@ td {
     font-size: 1.8rem;
 }
 
+.book td:nth-of-type(-n+2) {
+    word-break: break-all;
+}
+
 .btn {
     font-size: 1.4rem;
     padding: 0.4rem 2rem;

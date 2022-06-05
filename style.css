@@ -103,7 +103,8 @@ input:-webkit-autofill:active {
     border-bottom: 1px solid hsl(8, 94%, 72%);
 }
 
-#books td {
+td {
+    width: 10rem;
     padding: 1rem;
     font-size: 1.8rem;
 }

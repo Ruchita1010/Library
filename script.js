@@ -20,11 +20,13 @@ const clearFormInput = (formDiv) => {
 
 let library = [];
 
-// book constructor
-function Book(name, author, status) {
-    this.name = name;
-    this.author = author;
-    this.status = status;
+// book class
+class Book{
+    constructor(name, author, status){
+        this.name = name;
+        this.author = author;
+        this.status = status;
+    }
 }
 
 const displayLibrary = () => {
@@ -103,6 +105,7 @@ const updateData = (e) => {
             bookObj.status = "Read";
         }
         else {
+            console.log("dhk")
             e.target.innerText = "Not Read";
             bookObj.status = "Not Read";
         }
